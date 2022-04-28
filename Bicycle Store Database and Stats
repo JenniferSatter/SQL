@@ -1,0 +1,30 @@
+CREATE TABLE bikes (
+id INTEGER PRIMARY KEY,
+name TEXT, 
+quantity INTEGER, 
+color TEXT,
+price INTEGER); 
+
+
+
+
+INSERT INTO bikes VALUES (1, "Specialized", 4, "Blue", 1500);
+INSERT INTO bikes VALUES (2, "Cannondale", 6, "Grey", 2500);
+INSERT INTO bikes VALUES (3, "Santa Cruz", 11, "Teal", 4500);
+INSERT INTO bikes VALUES (4, "Santa Cruz 5010", 2, "Pacific Blue", 5500);
+INSERT INTO bikes VALUES (5, "Basso", 8, "Pink", 500);
+INSERT INTO bikes VALUES (6, "Bombtrack", 2, "Grey", 700);
+INSERT INTO bikes VALUES (7, "Burley", 1, "Lime Green", 1500);
+INSERT INTO bikes VALUES (8, "Julianna", 9, "Orange", 500);
+INSERT INTO bikes VALUES (9, "Mongoose", 1, "Blue", 250);
+INSERT INTO bikes VALUES (10, "Fuji", 3, "Blue", 800);
+INSERT INTO bikes VALUES (11, "Tommaso", 1, "Blue", 500);
+INSERT INTO bikes VALUES (12, "Kona", 9, "Red", 1700);
+INSERT INTO bikes VALUES (13, "Giant", 5, "Blue", 1500);
+INSERT INTO bikes VALUES (14, "Liv", 4, "Black", 1500);
+INSERT INTO bikes VALUES (15, "Trek", 1, "Blue", 2500);
+
+SELECT * FROM bikes;
+SELECT SUM(price) FROM bikes;
+SELECT name, SUM(price) FROM bikes GROUP BY name;
+SELECT name, SUM(price*quantity) FROM bikes GROUP BY name ORDER BY price*quantity desc;    
